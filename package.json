@@ -4,7 +4,8 @@
   "description": "Quench your thirst for conversation in this lively hub inspired by the iconic Nuka-Cola of Fallout.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' ./server.ts"
   },
   "author": "",
   "license": "ISC",
@@ -13,7 +14,11 @@
     "@types/node": "^20.12.7",
     "@types/socket.io": "^3.0.2",
     "express": "^4.19.2",
-    "socket.io": "^4.7.5",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   }
 }
