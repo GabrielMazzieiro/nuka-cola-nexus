@@ -1,0 +1,19 @@
+{
+  "name": "nuka-cola-nexus",
+  "version": "1.0.0",
+  "description": "Quench your thirst for conversation in this lively hub inspired by the iconic Nuka-Cola of Fallout.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.7",
+    "@types/socket.io": "^3.0.2",
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5",
+    "typescript": "^5.4.5"
+  }
+}
