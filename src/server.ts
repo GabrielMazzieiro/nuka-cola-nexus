@@ -5,9 +5,6 @@ import log from './log/logger';
 import mongo from './connection/mongodbConnection';
 import 'dotenv/config'
 
-// const app = express();
-// const server = http.createServer(app);
-// const io = new Server(server);
 let appServer: httpServer;
 
 /**
@@ -19,6 +16,7 @@ async function initialize() {
 
   const io = new Server(appServer);
 
+  //TODO: WS will be responsible for consume rabbitMQ
   // Socket.io connections
   io.on('connection', (socket: Socket) => {
     console.log('A user connected');
