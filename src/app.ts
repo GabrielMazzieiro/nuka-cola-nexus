@@ -16,9 +16,11 @@ export async function appInitialize() : Promise<Server> {
     app.use(express.static('public'));
 
     const PORT = process.env.PORT || 3000;
-    server = app.listen(PORT, () => {
+    const ADDRESS = process.env.ADDRESS || '0.0.0.0';
+
+    server = app.listen(+PORT, ADDRESS,0,() => {
         log.info(`[*] API started successfully.`.blue);
-        log.info(`Nuka-Cola Nexus API listening on ${PORT}!`.green);
+        log.info(`Nuka-Cola Nexus API listening on ${ADDRESS}:${PORT}!`.green);
     });
 
     return server;
